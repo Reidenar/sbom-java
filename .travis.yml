@@ -9,6 +9,8 @@ jobs:
     script: # existing functionality
       - java -version
   - name: “sbom”
+    script: # existing functionality
+      - java -version
     addons:
       sbom:
         on:
