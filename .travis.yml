@@ -14,12 +14,6 @@ jobs:
         on:
           branch: 'main'
           pr: false
-    deploy:
-  provider: <provider>
-  # ⋮
-  on:
-    branch: release
-    condition: $MY_ENV = value
         run_phase: "after_success" # 
         output_format: "cyclonedx-json" # 
         output_dir: "test" # 
