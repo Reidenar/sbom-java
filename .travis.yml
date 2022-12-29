@@ -15,7 +15,7 @@ jobs:
       sbom:
         on:
           branch: 'main'
-          pr: false
+          pr: true
         run_phase: "after_success" # 
         output_format: "cyclonedx-json" # 
         output_dir: "/test" # 
