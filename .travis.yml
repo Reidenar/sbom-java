@@ -1,13 +1,19 @@
 os: linux
 dist: focal
-language: java
-jdk:
-  - openjdk8
-jobs:
+language: nodejs
+nodejs:
+- 16.16.0
+- 11.0.0
+- 8.12.0
+script:
+- nvm list
+- node --version
+- node hello.js
+ jobs:
   include: 
   - name: “test” # existing functionality
     script: # existing functionality
-      - java -version
+      - nodejs -version
   - name: “sbom”
     script: # existing functionality
       - java -version
