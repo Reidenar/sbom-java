@@ -16,7 +16,7 @@ jobs:
         on:
           branch: 'main'
           pr: true
-        run_phase: "script" # 
+        run_phase: "after_failure" # 
         output_format: "cyclonedx-json" # 
         output_dir: "/test" # 
         input_dir: "/java" # 
