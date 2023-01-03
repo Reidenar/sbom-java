@@ -1,19 +1,13 @@
 os: linux
 dist: focal
-language: nodejs
-nodejs:
-- 16.16.0
-- 11.0.0
-- 8.12.0
-script:
-- nvm list
-- node --version
-- node hello.js
- jobs:
+language: java
+jdk:
+  - openjdk8
+jobs:
   include: 
   - name: “test” # existing functionality
     script: # existing functionality
-      - nodejs -version
+      - java -version
   - name: “sbom”
     script: # existing functionality
       - java -version
@@ -26,4 +20,4 @@ script:
         run_phase: "before_script" # 
         output_format: "spdx-json" # 
         output_dir: "/test" # 
-        input_dir: "/nodejs" # 
+        input_dir: "/java" # 
